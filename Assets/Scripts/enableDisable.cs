@@ -7,6 +7,8 @@ public class enableDisable : MonoBehaviour
     // Start is called before the first frame update
     public SpriteRenderer sr;
     public GameObject canvas;
+    public AudioSource lol;
+    public AudioClip clip;
     void Start()
     {
         
@@ -24,6 +26,13 @@ public class enableDisable : MonoBehaviour
         {
             sr.enabled = false;
             canvas.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.J))
+        {
+            if (lol.isPlaying == false)
+            {
+                lol.PlayOneShot(clip);
+            }
         }
     }
 }
