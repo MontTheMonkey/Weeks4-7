@@ -13,9 +13,9 @@ public class carPrefabSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.deltaTime % 5 == 0)
-        {
-            if (gameobject < 7)
-        }
+        //if (Time.deltaTime % 5 == 0)
+        //{
+            //if (gameobject < 7);
+        //}
     }
 }
