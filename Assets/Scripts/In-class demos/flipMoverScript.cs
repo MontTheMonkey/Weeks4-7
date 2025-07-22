@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class flipMoverScript : MonoBehaviour
 {
@@ -19,9 +20,10 @@ public class flipMoverScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moveRight = true;
+        moveRight = false;
         objSpriteRnd = GetComponent<SpriteRenderer>();
         orgSprite = objSpriteRnd.sprite;
+        clickStopAudioSource.clip = clickStopAudio;
     }
 
     // Update is called once per frame
@@ -36,11 +38,13 @@ public class flipMoverScript : MonoBehaviour
     public void OnClickMove()
     {
         moveRight = true;
+        clickMoveAudioSource.Play();
         Debug.Log("Move was clicked");
     }
     public void OnClickStop()
     {
         moveRight = false;
+        clickStopAudioSource.Play();
         Debug.Log("Stop was clicked");
     }
     public void OnClickFlip()
