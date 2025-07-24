@@ -22,10 +22,15 @@ public class heroScript : MonoBehaviour
     void Update()
     {
         healthBar.value = currentHealth / maxHealth;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && currentHealth > 0)
         {
             currentHealth = currentHealth - dmgValue;
             heroAudio.PlayOneShot(hitSfx);
+            Debug.Log("Current health is " + currentHealth.ToString());
+        }
+        if (currentHealth <= 0)
+        {
+            Debug.Log("Hero is dead");
         }
     }
 }

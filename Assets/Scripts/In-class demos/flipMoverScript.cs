@@ -56,15 +56,7 @@ public class flipMoverScript : MonoBehaviour
     }
     public void OnClickSpriteAlt()
     {
-        if (objSpriteRnd.sprite = alterSprite)
-        {
-            objSpriteRnd.sprite = orgSprite;
-        }
-        else
-        {
-            objSpriteRnd.sprite = alterSprite;
-        }
-
-
+        //Would like to switch back
+        objSpriteRnd.sprite = alterSprite;
     }
 }
