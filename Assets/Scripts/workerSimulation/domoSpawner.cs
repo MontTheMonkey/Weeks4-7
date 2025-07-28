@@ -23,7 +23,7 @@ public class domoSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ingameDomo);
+        //Debug.Log(ingameDomo);
         if (domoSpawned == true)
         {
             ingameDomo = Instantiate(domoObj[rdNumber], GetComponent<Transform>());
@@ -35,11 +35,6 @@ public class domoSpawner : MonoBehaviour
             Destroy(ingameDomo);
             curGrab.cursorSprRnd.sprite = curGrab.domoSpr[rdNumber];
             Debug.Log("grab function peocesddrfdjcxgjdc");
-        }
-        if (Input.GetKeyDown(KeyCode.Space) == true)
-        {
-            Destroy(ingameDomo);
-            Debug.Log("destroy!");
         }
     }
 }
