@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class volumeIcon : MonoBehaviour
 {
-    //Adobe Stock #1365533528
+    //Volume icons from Adobe Stock - #1365533528
     public SpriteRenderer volSpriteRndr;
     public Sprite fullVol;
     public Sprite halfVol;

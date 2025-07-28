@@ -315,11 +315,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6258a64cab26e2a585fa5cb60b74a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mousePos: {x: 0, y: 0}
+  domoSpwn: {fileID: 1080368947}
+  cursorSprRnd: {fileID: 0}
   cursorNorm: {fileID: 21300000, guid: 90787a92e200c4d76954d5bb1159b7fe, type: 3}
   cursorHold: {fileID: 21300000, guid: b76e530f29bb7bbd39f78c6f1cb83a9b, type: 3}
-  ninjaHeld: {fileID: 21300000, guid: e84a741c7af9bb60ea4d47107c99c4b6, type: 3}
-  redHeld: {fileID: 21300000, guid: f348321f910dbb91d9b6294985fd8ac2, type: 3}
-  skyHeld: {fileID: 21300000, guid: 838d1faf83af1a7efa46786b3bcb7658, type: 3}
+  domoSpr:
+  - {fileID: 21300000, guid: e84a741c7af9bb60ea4d47107c99c4b6, type: 3}
+  - {fileID: 21300000, guid: 838d1faf83af1a7efa46786b3bcb7658, type: 3}
+  - {fileID: 21300000, guid: f348321f910dbb91d9b6294985fd8ac2, type: 3}
 --- !u!212 &371565465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -360,7 +364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 90787a92e200c4d76954d5bb1159b7fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -630,7 +634,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f78f96acd33b5ccb5a830867a751219e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -667,7 +671,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1080368946}
   - component: {fileID: 1080368947}
-  - component: {fileID: 1080368948}
   m_Layer: 0
   m_Name: domoSpawner
   m_TagString: Untagged
@@ -702,59 +705,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81816921865fd9e60806864f208a2132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  domoObj:
+  - {fileID: 2451269885198561455, guid: d0b852aa1c3f6da4f8775f15f3e8535c, type: 3}
+  - {fileID: 2115646723411430251, guid: cda033b04c820299898e38b7381ded0c, type: 3}
+  - {fileID: 8409592193335433652, guid: 8199746cf722d6d088aaef9af057ddcb, type: 3}
+  ingameDomo: {fileID: 0}
   playerScore: 0
---- !u!212 &1080368948
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080368945}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e965bb36636732632b81a2173d975902, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4.2, y: 4.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  rdNumber: 0
+  domoSpawned: 0
+  curGrab: {fileID: 371565464}
 --- !u!1 &1102972250
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +725,8 @@ GameObject:
   - component: {fileID: 1102972251}
   - component: {fileID: 1102972253}
   - component: {fileID: 1102972252}
+  - component: {fileID: 1102972254}
+  - component: {fileID: 1102972255}
   m_Layer: 5
   m_Name: pointsText
   m_TagString: Untagged
@@ -789,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 190, y: -100}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 234, y: -99}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102972252
 MonoBehaviour:
@@ -839,13 +800,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 96
-  m_fontSizeBase: 96
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 104
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -875,7 +836,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -256.4217, w: -46.53357}
+  m_margin: {x: 0, y: 0, z: -1469.3251, w: -46.53357}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -889,6 +850,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102972250}
   m_CullTransparentMesh: 1
+--- !u!114 &1102972254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102972250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 065071f36ec6a49aaa7cc50fdbfd8ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsText: {fileID: 1102972252}
+  domoSpwn: {fileID: 1080368947}
+--- !u!210 &1102972255
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102972250}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_SortAtRoot: 0
 --- !u!1 &1181923403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1355,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
