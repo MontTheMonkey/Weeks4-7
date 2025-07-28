@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class uiPrompts : MonoBehaviour
 {
-    public TextMeshProUGUI pointsText;
+    public TextMeshProUGUI pointsTMP;
     public domoSpawner domoSpwn;
     // Start is called before the first frame update
     void Start()
@@ -18,10 +18,10 @@ public class uiPrompts : MonoBehaviour
     {
         if (domoSpwn.playerScore == 0)
         {
-            pointsText.text = "Press left click to grab and release the DOMO";
+            pointsTMP.text = "Press left click to grab and release the DOMO";
         }
         else {
-            pointsText.text = "Points: " + domoSpwn.playerScore.ToString();
+            pointsTMP.text = "Points: " + domoSpwn.playerScore.ToString();
         }
     }
 }

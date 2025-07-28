@@ -34,7 +34,6 @@ public class domoSpawner : MonoBehaviour
         {
             Destroy(ingameDomo);
             curGrab.cursorSprRnd.sprite = curGrab.domoSpr[rdNumber];
-            Debug.Log("grab function peocesddrfdjcxgjdc");
         }
     }
 }
