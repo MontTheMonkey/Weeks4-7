@@ -323,7 +323,7 @@ MonoBehaviour:
   domoSpr:
   - {fileID: 21300000, guid: e84a741c7af9bb60ea4d47107c99c4b6, type: 3}
   - {fileID: 21300000, guid: 838d1faf83af1a7efa46786b3bcb7658, type: 3}
-  - {fileID: 21300000, guid: f348321f910dbb91d9b6294985fd8ac2, type: 3}
+  - {fileID: 21300000, guid: 50fa88fc2bbeacc3c82434e087ef9a3c, type: 3}
 --- !u!212 &371565465
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1098,7 +1098,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 887cb3be8ede3dc56b30baf71e7f2d60, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b4ceb02b441ed49a9a0c8e85ce12752c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1355,7 +1355,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

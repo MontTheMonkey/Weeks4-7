@@ -28,14 +28,14 @@ public class cursorGrab : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePos;
         timer += Time.deltaTime;
-        Debug.Log(mousePos);
-        // if (Input.GetKey(KeyCode.Mouse0) && cursorSprRnd.sprite == cursorNorm)
+        //Debug.Log(mousePos);
+        // if (Input.GetKey(KeyCode.Mouse0) == true && cursorSprRnd.sprite == cursorNorm)
         // {
-        //     cursorSprRnd.sprite = cursorHold;
-        //     //Debug.Log("The cursor is " + mousePos);
+        //      cursorSprRnd.sprite = cursorHold;
+        //      //Debug.Log("The cursor is " + mousePos);
         // }
-        // else if (cursorSprRnd.sprite != domoSpr[0] || cursorSprRnd.sprite != domoSpr[1] || cursorSprRnd.sprite != domoSpr[domoSpr.Count])
-        // {
+        // else if (cursorSprRnd.sprite != domoSpr[0] || cursorSprRnd.sprite != domoSpr[1] || cursorSprRnd.sprite != domoSpr[domoSpr.Count] && Input.GetKey(KeyCode.Mouse0) == false)
+        //  {
         //     cursorSprRnd.sprite = cursorNorm;
         // }
 
@@ -46,7 +46,7 @@ public class cursorGrab : MonoBehaviour
             domoSpwn.rdNumber = UnityEngine.Random.Range(0, domoSpwn.domoObj.Count);
             cursorSprRnd.sprite = cursorNorm;
             domoSpwn.domoSpawned = true;
-            if (timer <= 2f)
+            if (timer <= 1f)
             {
                 domoSpwn.playerScore += 1;
             }
@@ -59,7 +59,7 @@ public class cursorGrab : MonoBehaviour
             domoSpwn.rdNumber = UnityEngine.Random.Range(0, domoSpwn.domoObj.Count);
             cursorSprRnd.sprite = cursorNorm;
             domoSpwn.domoSpawned = true;
-            if (timer <= 2f)
+            if (timer <= 1f)
             {
                 domoSpwn.playerScore += 1;
             }
@@ -72,7 +72,7 @@ public class cursorGrab : MonoBehaviour
             domoSpwn.rdNumber = UnityEngine.Random.Range(0, domoSpwn.domoObj.Count);
             cursorSprRnd.sprite = cursorNorm;
             domoSpwn.domoSpawned = true;
-            if (timer <= 2f)
+            if (timer <= 1)
             {
                 domoSpwn.playerScore += 1;
             }
