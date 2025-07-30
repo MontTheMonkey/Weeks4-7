@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class froggerMovement : MonoBehaviour
 {
-    Vector2 playerPos;
+    public TMP_Text deathMsg;
+    public carMovement carEntity;
+    public Vector2 playerPos;
     Vector2 playerSpawn = new Vector2(0, -4);
     float leapDistance = 0.5f;
     // Start is called before the first frame update
@@ -37,6 +40,11 @@ public class froggerMovement : MonoBehaviour
         {
             playerPos.x -= leapDistance;
             transform.position = playerPos;
+        }
+        if (carEntity.carSprRndr.bounds.Contains(playerPos) == true)
+        {
+            transform.position = playerSpawn;
+            deathMsg.text = "You died";
         }
     }
 }
