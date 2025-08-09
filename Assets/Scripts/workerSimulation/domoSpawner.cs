@@ -16,6 +16,7 @@ public class domoSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //This allows the first DOMO to spawn before any player engagement has been done
         rdNumber = UnityEngine.Random.Range(0, domoObj.Count);
         domoSpawned = true;
     }
@@ -24,12 +25,14 @@ public class domoSpawner : MonoBehaviour
     void Update()
     {
         //Debug.Log(ingameDomo);
+
+        //The condition for spawning can only be triggered once the player has deposited a DOMO
         if (domoSpawned == true)
         {
             ingameDomo = Instantiate(domoObj[rdNumber], GetComponent<Transform>());
             domoSpawned = false;
         }
-        //DOMO spawn area
+        //If you click in the DOMO spawn area, the object will be destroyed and the cursor will carry the DOMO
         if (curGrab.mousePos.x >= -1.6f && curGrab.mousePos.x <= 1.8f && curGrab.mousePos.y >= 0.9f && Input.GetKeyDown(KeyCode.Mouse0) == true)
         {
             Destroy(ingameDomo);

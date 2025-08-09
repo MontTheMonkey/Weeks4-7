@@ -223,7 +223,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1248198856}
-  - component: {fileID: 1248198859}
   - component: {fileID: 1248198858}
   - component: {fileID: 1248198857}
   m_Layer: 0
@@ -272,7 +271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You died
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -386,14 +385,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &1248198859
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248198855}
-  m_CullTransparentMesh: 1
 --- !u!1 &1816934936
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carObj: {fileID: 1816934936}
+  carSprRndr: {fileID: 0}
   carSpeed: 1.25
 --- !u!212 &1816934938
 SpriteRenderer:
@@ -523,6 +515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b645db5c5768190877f7b1906c305b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathMsg: {fileID: 1248198857}
+  carEntity: {fileID: 1816934937}
+  playerPos: {x: 0, y: 0}
 --- !u!212 &2028040935
 SpriteRenderer:
   m_ObjectHideFlags: 0

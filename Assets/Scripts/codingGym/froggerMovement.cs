@@ -41,6 +41,8 @@ public class froggerMovement : MonoBehaviour
             playerPos.x -= leapDistance;
             transform.position = playerPos;
         }
+
+        //Death condition for contact with cars
         if (carEntity.carSprRndr.bounds.Contains(playerPos) == true)
         {
             transform.position = playerSpawn;
